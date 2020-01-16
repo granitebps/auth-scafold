@@ -23,4 +23,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
         Route::resource('user', 'UserController');
     });
+
+    Route::get('profile', 'ProfileController@edit')->name('profile.edit');
+    Route::post('profile', 'ProfileController@update')->name('profile.update');
 });

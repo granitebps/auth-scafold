@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    /**
+     * Get All Users
+     *
+     * @return Collection 
+     */
     public function index()
     {
         $users = User::whereNotIn('role', ['admin'])->paginate(10);
@@ -21,7 +26,7 @@ class UserController extends Controller
 
     public function create()
     {
-        $data['title'] = 'Users List';
+        $data['title'] = 'Create User';
 
         return view('admin.user.create')->with($data);
     }
@@ -56,8 +61,8 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
 
-        $data['title'] = 'Users List';
-        $data['users'] = $user;
+        $data['title'] = 'Edit User';
+        $data['user'] = $user;
 
         return view('admin.user.edit')->with($data);
     }
@@ -66,9 +71,9 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => 'requiredstring|max:255',
-            'username' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
+            'username' => 'required|string|max:255|unique:users,username,'.$id,
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'password' => 'nullable|string|min:8|confirmed',
         ]);
 
         DB::beginTransaction();
@@ -79,8 +84,12 @@ class UserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'username' => $request->username,
-                'password' => Hash::make($request->password),
             ]);
+
+            if($request->has('password')){
+                $user->password = Hash::make($request->password);
+                $user->save();
+            }
 
             DB::commit();
             return redirect()->route('user.index');
