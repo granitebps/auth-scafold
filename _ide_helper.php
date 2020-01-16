@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 6.10.1 on 2020-01-16 15:49:15.
+ * Generated for Laravel 6.10.1 on 2020-01-16 16:26:15.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -15031,6 +15031,190 @@ namespace Facade\Ignition\Facades {
  
 }
 
+namespace Mckenziearts\Notify\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class LaravelNotify {
+        
+        /**
+         * Flash an information message.
+         *
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function info($message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->info($message);
+        }
+        
+        /**
+         * Flash a success message.
+         *
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function success($message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->success($message);
+        }
+        
+        /**
+         * Flash an error message.
+         *
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function error($message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->error($message);
+        }
+        
+        /**
+         * Flash a warning message.
+         *
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function warning($message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->warning($message);
+        }
+        
+        /**
+         * Return a Connect Notification.
+         *
+         * @param string $type
+         * @param string $title
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function connect($type, $title, $message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->connect($type, $title, $message);
+        }
+        
+        /**
+         * Return a smiley notify.
+         *
+         * @param string $type
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function smiley($type, $message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->smiley($type, $message);
+        }
+        
+        /**
+         * Return a smiley notify.
+         *
+         * @param string $type
+         * @param string $message
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function emotify($type, $message)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->emotify($type, $message);
+        }
+        
+        /**
+         * Return a drake notify.
+         *
+         * @param string $type
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @static 
+         */ 
+        public static function drake($type)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->drake($type);
+        }
+        
+        /**
+         * Return a preset message that is defined in the config
+         * file. If you need to override any of the values, you
+         * can pass an array with the key-value pairs of what
+         * you want to override.
+         * 
+         * Example: To override the 'message' variable, the array
+         *          could have the following structure:
+         * 
+         *          ['message' => 'Your new message here!']
+         *
+         * @param string $presetName
+         * @param array $overrideValues
+         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @throws Exception
+         * @static 
+         */ 
+        public static function preset($presetName, $overrideValues = [])
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->preset($presetName, $overrideValues);
+        }
+        
+        /**
+         * Flash a message.
+         *
+         * @param string $message
+         * @param string|null $type
+         * @param string|null $icon
+         * @param string|null $model
+         * @param string|null $title
+         * @return void 
+         * @static 
+         */ 
+        public static function flash($message, $type = null, $icon = null, $model = null, $title = null)
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        $instance->flash($message, $type, $icon, $model, $title);
+        }
+        
+        /**
+         * Get the stored message.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function message()
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->message();
+        }
+        
+        /**
+         * Get the stored type.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function type()
+        {
+                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
+                        return $instance->type();
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -17896,6 +18080,8 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Flare extends \Facade\Ignition\Facades\Flare {}
+
+    class Notify extends \Mckenziearts\Notify\Facades\LaravelNotify {}
  
 }
 
