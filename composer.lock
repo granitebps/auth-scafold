@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9fb0bab28b0cae3bb8ff9c3d4eea23d",
+    "content-hash": "43f9fea4a23f4d39b78aeb2ec828f9d7",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -423,16 +423,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v6.10.1",
+            "version": "v6.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "fe45ad5bc89e5e1b08ab2c8687f9be01c9c84d14"
+                "reference": "17af23842c259edcfd8c5b9e6a7c86596e040034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/fe45ad5bc89e5e1b08ab2c8687f9be01c9c84d14",
-                "reference": "fe45ad5bc89e5e1b08ab2c8687f9be01c9c84d14",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/17af23842c259edcfd8c5b9e6a7c86596e040034",
+                "reference": "17af23842c259edcfd8c5b9e6a7c86596e040034",
                 "shasum": ""
             },
             "require": {
@@ -566,20 +566,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-01-08T21:17:42+00:00"
+            "time": "2020-01-14T15:12:09+00:00"
         },
         {
             "name": "laravel/tinker",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/tinker.git",
-                "reference": "6c2f1a1873180f3ecece0ba34ff9146847bf8dec"
+                "reference": "d8ce361f2fd979c03e5f66c79d4a95a1c1e68640"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/tinker/zipball/6c2f1a1873180f3ecece0ba34ff9146847bf8dec",
-                "reference": "6c2f1a1873180f3ecece0ba34ff9146847bf8dec",
+                "url": "https://api.github.com/repos/laravel/tinker/zipball/d8ce361f2fd979c03e5f66c79d4a95a1c1e68640",
+                "reference": "d8ce361f2fd979c03e5f66c79d4a95a1c1e68640",
                 "shasum": ""
             },
             "require": {
@@ -629,20 +629,20 @@
                 "laravel",
                 "psysh"
             ],
-            "time": "2019-11-26T17:57:28+00:00"
+            "time": "2020-01-14T16:58:39+00:00"
         },
         {
             "name": "league/commonmark",
-            "version": "1.2.0",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "2533c389fd2a7573d4f7be279b1c33cf941c8dfc"
+                "reference": "34cf4ddb3892c715ae785c880e6691d839cff88d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2533c389fd2a7573d4f7be279b1c33cf941c8dfc",
-                "reference": "2533c389fd2a7573d4f7be279b1c33cf941c8dfc",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/34cf4ddb3892c715ae785c880e6691d839cff88d",
+                "reference": "34cf4ddb3892c715ae785c880e6691d839cff88d",
                 "shasum": ""
             },
             "require": {
@@ -700,7 +700,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2020-01-09T22:41:09+00:00"
+            "time": "2020-01-16T01:18:13+00:00"
         },
         {
             "name": "league/commonmark-ext-table",
@@ -850,67 +850,6 @@
                 "storage"
             ],
             "time": "2020-01-04T16:30:31+00:00"
-        },
-        {
-            "name": "mckenziearts/laravel-notify",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mckenziearts/laravel-notify.git",
-                "reference": "cd0b5a0a29ac92c5a3151305c23e7ae2c7dacb56"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mckenziearts/laravel-notify/zipball/cd0b5a0a29ac92c5a3151305c23e7ae2c7dacb56",
-                "reference": "cd0b5a0a29ac92c5a3151305c23e7ae2c7dacb56",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "~5.0|~6.0|~7.0",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "phpunit/phpunit": "^8.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Mckenziearts\\Notify\\LaravelNotifyServiceProvider"
-                    ],
-                    "aliases": {
-                        "Notify": "Mckenziearts\\Notify\\Facades\\LaravelNotify"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Mckenziearts\\Notify\\": "src/"
-                },
-                "files": [
-                    "src/helpers.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Arthur Monney",
-                    "email": "monneylobe@gmail.com",
-                    "homepage": "https://arthurmonney.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Flexible flash notifications for Laravel",
-            "homepage": "https://github.com/mckenziearts/laravel-notify",
-            "keywords": [
-                "laravel",
-                "laravel-notify"
-            ],
-            "time": "2019-12-17T05:20:32+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3116,6 +3055,89 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "yoeunes/notify",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yoeunes/notify.git",
+                "reference": "53472b496adbd12b22c03584c161556ffad67e8b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yoeunes/notify/zipball/53472b496adbd12b22c03584c161556ffad67e8b",
+                "reference": "53472b496adbd12b22c03584c161556ffad67e8b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
+                "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
+                "php": "^7.0|^7.1|^7.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.5.*|3.6.*|3.7.*",
+                "phpunit/phpunit": "^6.2|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Yoeunes\\Notify\\NotifyServiceProvider"
+                    ],
+                    "aliases": {
+                        "Notify": "Yoeunes\\Notify\\Facades\\Notify"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yoeunes\\Notify\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Younes Khoubza",
+                    "email": "younes.khoubza@gmail.com",
+                    "homepage": "https://github.com/yoeunes/notify",
+                    "role": "Developer"
+                }
+            ],
+            "description": "toastr.js, pnotify.js flush notifications for Laravel 5 and Lumen",
+            "homepage": "https://github.com/yoeunes/notify",
+            "keywords": [
+                "Laravel 5.6",
+                "alerts",
+                "flush",
+                "flush messages",
+                "flush notifications",
+                "laravel",
+                "laravel 5",
+                "laravel 5.7",
+                "laravel 5.8",
+                "laravel 6",
+                "laravel flush notifications",
+                "laravel notification",
+                "laravel pnotify",
+                "laravel toastr",
+                "lumen",
+                "messages",
+                "notification",
+                "php",
+                "pnotify",
+                "pnotify js",
+                "toastr",
+                "toastr js",
+                "yoeunes"
+            ],
+            "time": "2019-09-06T22:09:56+00:00"
         }
     ],
     "packages-dev": [
@@ -4017,16 +4039,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.7.0",
+            "version": "2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "4c97f814aa2f0dd4d5bedc89181c10ef12c004c5"
+                "reference": "fff6f1e4f36be0e0d0b84d66b413d9dcb0c49130"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/4c97f814aa2f0dd4d5bedc89181c10ef12c004c5",
-                "reference": "4c97f814aa2f0dd4d5bedc89181c10ef12c004c5",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/fff6f1e4f36be0e0d0b84d66b413d9dcb0c49130",
+                "reference": "fff6f1e4f36be0e0d0b84d66b413d9dcb0c49130",
                 "shasum": ""
             },
             "require": {
@@ -4074,7 +4096,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2019-12-29T10:00:00+00:00"
+            "time": "2020-01-15T10:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -4364,16 +4386,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.9.4",
+            "version": "1.9.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7"
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/579bb7356d91f9456ccd505f24ca8b667966a0a7",
-                "reference": "579bb7356d91f9456ccd505f24ca8b667966a0a7",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/b2c28789e80a97badd14145fda39b545d83ca3ef",
+                "reference": "b2c28789e80a97badd14145fda39b545d83ca3ef",
                 "shasum": ""
             },
             "require": {
@@ -4408,7 +4430,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2019-12-15T19:12:40+00:00"
+            "time": "2020-01-17T21:11:47+00:00"
         },
         {
             "name": "nunomaduro/collision",

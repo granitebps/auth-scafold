@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 6.10.1 on 2020-01-16 16:26:15.
+ * Generated for Laravel 6.11.0 on 2020-01-19 14:44:07.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -4078,20 +4078,6 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
-         * Bind values to their parameters in the given statement.
-         *
-         * @param \PDOStatement $statement
-         * @param array $bindings
-         * @return void 
-         * @static 
-         */ 
-        public static function bindValues($statement, $bindings)
-        {
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
-                        $instance->bindValues($statement, $bindings);
-        }
-        
-        /**
          * Set the query grammar to the default implementation.
          *
          * @return void 
@@ -4322,6 +4308,21 @@ namespace Illuminate\Support\Facades {
             //Method inherited from \Illuminate\Database\Connection            
                         /** @var \Illuminate\Database\MySqlConnection $instance */
                         return $instance->pretend($callback);
+        }
+        
+        /**
+         * Bind values to their parameters in the given statement.
+         *
+         * @param \PDOStatement $statement
+         * @param array $bindings
+         * @return void 
+         * @static 
+         */ 
+        public static function bindValues($statement, $bindings)
+        {
+            //Method inherited from \Illuminate\Database\Connection            
+                        /** @var \Illuminate\Database\MySqlConnection $instance */
+                        $instance->bindValues($statement, $bindings);
         }
         
         /**
@@ -15031,184 +15032,52 @@ namespace Facade\Ignition\Facades {
  
 }
 
-namespace Mckenziearts\Notify\Facades { 
+namespace Yoeunes\Notify\Facades { 
 
     /**
      * 
      *
      */ 
-    class LaravelNotify {
+    class Notify {
         
         /**
-         * Flash an information message.
+         * Add a notification.
          *
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
+         * @param string $type Could be error, info, success, or warning.
+         * @param string $message The notification's message
+         * @param string $title The notification's title
+         * @param array $options
+         * @return self 
          * @static 
          */ 
-        public static function info($message)
+        public static function addNotification($type, $message, $title = '', $options = [])
         {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->info($message);
+                        /** @var \Yoeunes\Notify\Notify $instance */
+                        return $instance->addNotification($type, $message, $title, $options);
         }
         
         /**
-         * Flash a success message.
-         *
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function success($message)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->success($message);
-        }
-        
-        /**
-         * Flash an error message.
-         *
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function error($message)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->error($message);
-        }
-        
-        /**
-         * Flash a warning message.
-         *
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function warning($message)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->warning($message);
-        }
-        
-        /**
-         * Return a Connect Notification.
-         *
-         * @param string $type
-         * @param string $title
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function connect($type, $title, $message)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->connect($type, $title, $message);
-        }
-        
-        /**
-         * Return a smiley notify.
-         *
-         * @param string $type
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function smiley($type, $message)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->smiley($type, $message);
-        }
-        
-        /**
-         * Return a smiley notify.
-         *
-         * @param string $type
-         * @param string $message
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function emotify($type, $message)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->emotify($type, $message);
-        }
-        
-        /**
-         * Return a drake notify.
-         *
-         * @param string $type
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @static 
-         */ 
-        public static function drake($type)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->drake($type);
-        }
-        
-        /**
-         * Return a preset message that is defined in the config
-         * file. If you need to override any of the values, you
-         * can pass an array with the key-value pairs of what
-         * you want to override.
-         * 
-         * Example: To override the 'message' variable, the array
-         *          could have the following structure:
-         * 
-         *          ['message' => 'Your new message here!']
-         *
-         * @param string $presetName
-         * @param array $overrideValues
-         * @return \Mckenziearts\Notify\LaravelNotify 
-         * @throws Exception
-         * @static 
-         */ 
-        public static function preset($presetName, $overrideValues = [])
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->preset($presetName, $overrideValues);
-        }
-        
-        /**
-         * Flash a message.
-         *
-         * @param string $message
-         * @param string|null $type
-         * @param string|null $icon
-         * @param string|null $model
-         * @param string|null $title
-         * @return void 
-         * @static 
-         */ 
-        public static function flash($message, $type = null, $icon = null, $model = null, $title = null)
-        {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        $instance->flash($message, $type, $icon, $model, $title);
-        }
-        
-        /**
-         * Get the stored message.
+         * Render the notifications' script tag.
          *
          * @return string 
          * @static 
          */ 
-        public static function message()
+        public static function render()
         {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->message();
+                        /** @var \Yoeunes\Notify\Notify $instance */
+                        return $instance->render();
         }
         
         /**
-         * Get the stored type.
+         * Clear all notifications.
          *
-         * @return string 
+         * @return self 
          * @static 
          */ 
-        public static function type()
+        public static function clear()
         {
-                        /** @var \Mckenziearts\Notify\LaravelNotify $instance */
-                        return $instance->type();
+                        /** @var \Yoeunes\Notify\Notify $instance */
+                        return $instance->clear();
         }
          
     }
@@ -15348,6 +15217,22 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Eloquent\Builder $instance */
                                 return $instance->where($column, $operator, $value, $boolean);
+            }
+         
+            /**
+             * Add a basic where clause to the query, and return the first result.
+             *
+             * @param \Closure|string|array $column
+             * @param mixed $operator
+             * @param mixed $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Eloquent\Model|static 
+             * @static 
+             */ 
+            public static function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Eloquent\Builder $instance */
+                                return $instance->firstWhere($column, $operator, $value, $boolean);
             }
          
             /**
@@ -18081,7 +17966,7 @@ namespace  {
 
     class Flare extends \Facade\Ignition\Facades\Flare {}
 
-    class Notify extends \Mckenziearts\Notify\Facades\LaravelNotify {}
+    class Notify extends \Yoeunes\Notify\Facades\Notify {}
  
 }
 
